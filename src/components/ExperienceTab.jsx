@@ -3,20 +3,18 @@ import { Briefcase, Calendar, MapPin, Star } from "lucide-react";
 const ExperienceTab = () => {
   const experiences = [
     {
-      company: 'Tech Solutions Inc.',
-      role: 'Senior Frontend Developer',
-      duration: 'Jan 2023 - Present',
+      company: 'Groot Software',
+      role: 'Fullstack Developer',
+      duration: 'Sept 2024 - Present',
       location: 'Remote',
-      description: 'Led frontend development for multiple high-traffic applications. Mentored junior developers and implemented best practices.',
-      highlights: ['Built scalable React applications', 'Improved performance by 40%', 'Mentored 5 junior developers']
-    },
-    {
-      company: 'Digital Innovations Ltd.',
-      role: 'React Developer',
-      duration: 'Jun 2021 - Dec 2022',
-      location: 'Bangalore, India',
-      description: 'Developed and maintained React-based web applications. Collaborated with backend team to design RESTful APIs.',
-      highlights: ['Delivered 10+ projects on time', 'Implemented CI/CD pipelines', 'Reduced bug reports by 35%']
+      description: [
+        'Improved applications performance by 35% through implementation of modular reusable components, lazy loading strategies, and React memoization techniques, resulting in enhanced user experience and reduced bounce rates',
+        'Streamlined development workflow by creating custom React hooks and config-driven form systems, reducing form development time by 50% and ensuring consistent validation patterns across the application',
+        'Enhanced application security by implementing robust authentication system with JWT tokens, OAuth 2.0 integration, and role-based access control, ensuring secure user data handling',
+        'Delivered feature-rich admin dashboard enabling efficient management of users, content, and analytics; implemented real-time updates and data filtering/sorting functionalities',
+        'Developed RESTful APIs using Node.js and Express.js with proper error handling, input validation, and middleware for authentication; enhanced user experience by implementing responsive designs using TailwindCSS'
+      ],
+      highlights: ['Built scalable React applications', 'Improved performance by 40%']
     }
   ];
 
@@ -27,7 +25,6 @@ const ExperienceTab = () => {
           <div 
             key={index} 
             className="card hover-lift"
-            style={{ animation: `slideRight 0.5s ease-out ${index * 0.1}s backwards` }}
           >
             <div className="p-6">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
@@ -49,7 +46,16 @@ const ExperienceTab = () => {
                   </div>
                 </div>
               </div>
-              <p className="text-text-secondary mb-4">{exp.description}</p>
+              
+              <ul className="space-y-2 mb-4">
+                {exp.description.map((point, i) => (
+                  <li key={i} className="text-text-secondary flex items-start gap-2">
+                    <span className="text-primary-600 mt-1">•</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+              
               <div className="flex flex-wrap gap-2">
                 {exp.highlights.map((highlight, i) => (
                   <span key={i} className="badge flex items-center gap-1">

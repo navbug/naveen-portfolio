@@ -18,9 +18,10 @@ const TabNavigation = ({ tabs, activeTab, setActiveTab }) => {
                     ? "bg-gradient-to-r from-primary-600 to-accent-600 text-white shadow-lg tab-active"
                     : "btn-secondary"
                 }`}
+                style={{padding: "7px 12px"}}
               >
                 <Icon 
-                  className={`w-5 h-5 transition-transform duration-300 ${
+                  className={`w-6 h-6 transition-transform duration-300 ${
                     isActive ? 'rotate-0' : 'group-hover:rotate-12'
                   }`} 
                 />

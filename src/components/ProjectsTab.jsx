@@ -42,15 +42,15 @@ const ProjectsTab = () => {
         <div className="relative">
           <div
             className={`card overflow-hidden transition-all duration-500 ${
-              isAnimating ? "scale-95 opacity-70" : "scale-100 opacity-100"
+              isAnimating ? "scale-99 opacity-70" : "scale-100 opacity-100"
             }`}
           >
-            <div className="grid md:grid-cols-2 gap-0">
-              <div className="relative h-54 md:h-auto overflow-hidden group">
+            <div className="grid md:grid-cols-2 gap-0" style={{ minHeight: '350px' }}>
+              <div className="relative md:h-auto overflow-hidden group">
                 <img
                   src={currentProject.thumbnail}
                   alt={currentProject.name}
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform smooth-transition duration-700"
+                  className="w-full h-full object-center transform group-hover:scale-105 transition-transform smooth-transition duration-700"
                 />
                 <div className="project-image-overlay absolute inset-0"></div>
               </div>
@@ -91,14 +91,18 @@ const ProjectsTab = () => {
                   ))}
                 </div>
 
-                {/* Scrollable Description */}
                 <div
                   className="flex-1 overflow-y-auto custom-scrollbar pr-2"
                   style={{ maxHeight: "200px" }}
                 >
-                  <p className="text-text-secondary text-sm leading-relaxed">
-                    {currentProject.description}
-                  </p>
+                  <ul className="space-y-2">
+                    {currentProject.description.map((point, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-text-secondary text-sm leading-relaxed">
+                        <span className="text-primary-600 mt-1 flex-shrink-0">●</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
@@ -108,7 +112,7 @@ const ProjectsTab = () => {
           <button
             onClick={prevSlide}
             disabled={isAnimating}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 btn-secondary p-2 shadow-lg disabled:opacity-50 cursor-pointer"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 btn-secondary p-2 shadow-lg disabled:opacity-50 cursor-pointer"
             style={{ padding: "8px", borderRadius: "100%" }}
           >
             <ChevronLeft size={24} />
@@ -116,14 +120,13 @@ const ProjectsTab = () => {
           <button
             onClick={nextSlide}
             disabled={isAnimating}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 btn-secondary p-2 rounded-full shadow-lg disabled:opacity-50 cursor-pointer"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 btn-secondary p-2 rounded-full shadow-lg disabled:opacity-50 cursor-pointer"
             style={{ padding: "8px", borderRadius: "100%" }}
           >
             <ChevronRight size={24} />
           </button>
         </div>
 
-        {/* Pagination Dots */}
         <div className="flex justify-center gap-2 mt-6">
           {projects.map((_, idx) => (
             <button

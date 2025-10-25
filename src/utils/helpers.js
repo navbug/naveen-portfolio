@@ -17,45 +17,31 @@ export const projects = [
   {
     id: 1,
     name: "Shop Kar",
-    thumbnail:
-      "https://res.cloudinary.com/dkvbeylph/image/upload/v1761296578/Screenshot_2025-10-22_215400_tmvuf2.png",
+    thumbnail: "https://res.cloudinary.com/dkvbeylph/image/upload/v1761296578/Screenshot_2025-10-22_215400_tmvuf2.png",
     technologies: ["ReactJS", "Redux Toolkit", "Node.js", "MongoDB", "Stripe", "TailwindCSS"],
-    description:
-      `Full-stack e-commerce platform with role based access, sorting/filtering, and admin dashboard. Features include product management, user authentication, shopping cart functionality, and integrated payment processing.`,
+    description: [
+      "Built a full-stack e-commerce website using MERN stack with Redux Toolkit for state management, featuring user authentication, admin dashboard to manage orders, products & customers",
+      "Developed responsive UI with ShimmerUI loading patterns and implemented advanced product filtering/sorting functionality, optimized performance using React code-splitting/lazy loading, and memoization techniques",
+      "Engineered secure RESTful APIs with JWT authentication, protected routes, and comprehensive error handling; integrated Formik and Yup for robust form validation and file handling with proper loading/error states",
+      "Designed modular and scalable architecture following clean code principles, enabling easy maintenance and feature expansion while ensuring separation of concerns across frontend and backend components"
+    ],
     liveLink: "https://e-commerce-mern-frontend-mu.vercel.app/",
-    codeLink: "https://github.com/navbug/e-commerce-mern-frontend",
+    codeLink: "https://github.com/navbug/e-commerce-mern-frontend"
   },
   {
     id: 2,
     name: "Privyr CRM Clone",
-    thumbnail:
-      "https://res.cloudinary.com/dkvbeylph/image/upload/v1761296578/Screenshot_2025-10-24_143146_qdi9lh.png",
+    thumbnail: "https://res.cloudinary.com/dkvbeylph/image/upload/v1761296578/Screenshot_2025-10-24_143146_qdi9lh.png",
     technologies: ["ReactJS", "GoogleAPI", "Tailwind", "Node.js"],
-    description:
-      "A fullstack CRM(Customer Relationship Management) platform where team member can manage their clients, create content templates(message,files). Members can also import/export clients via csv file.",
+    description: [
+      "Developed a full-stack CRM web application clone of Privyr using MERN stack, featuring client management, follow-up scheduling, activity tracking, and team dashboard for clients/leads management",
+      "Built messaging system with customizable content templates for streamlined communication, integrated CSV import/export for bulk data operations and implemented full authentication flow with Google Sign-In for secure authentication",
+      "Integrated Cloudinary API for cloud-based asset management and file handling, other features include search functionality, breadcrumb navigation system for intuitive user experience across nested pages"
+    ],
     liveLink: "https://the-crm-app.vercel.app/",
-    codeLink: "https://github.com/navbug/The-CRM-App",
-  },
-  {
-    id: 3,
-    name: "Fitness Tracker App",
-    thumbnail:
-      "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&h=500&fit=crop",
-    technologies: ["React Native", "Firebase", "Redux", "Chart.js"],
-    description:
-      "Cross-platform mobile app for tracking workouts, nutrition, and progress with social features. Includes workout plans, calorie tracking, progress charts, and community challenges.",
-    liveLink: "https://example.com",
-    codeLink: "https://github.com",
-  },
-  {
-    id: 4,
-    name: "Real Estate Dashboard",
-    thumbnail:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
-    technologies: ["Vue.js", "Django", "PostgreSQL", "Mapbox"],
-    description:
-      "Comprehensive real estate management with property listings, maps, and analytics dashboard. Features advanced search filters, virtual tours, market analytics, and agent management tools.",
-    liveLink: "https://example.com",
-    codeLink: "https://github.com",
-  },
+    codeLink: "https://github.com/navbug/The-CRM-App"
+  }
 ];
+
+// Full-stack e-commerce platform with role based access, sorting/filtering, and admin dashboard. Features include product management, user authentication, shopping cart functionality, and integrated payment processing.
+// A fullstack CRM(Customer Relationship Management) platform where team member can manage their clients, create content templates(message,files). Members can also import/export clients via csv file.
