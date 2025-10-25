@@ -10,7 +10,7 @@ import {
   CodeXml,
 } from "lucide-react";
 import React, { useState, useEffect, useContext } from "react";
-import { ThemeContext } from "../Context/ThemeContext";
+import { ThemeContext } from "../context/ThemeContext";
 import naveen_resume from "../assets/naveen_resume.pdf";
 
 const Navbar = ({ onContactClick }) => {
