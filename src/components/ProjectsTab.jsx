@@ -50,6 +50,7 @@ const ProjectsTab = () => {
                 <img
                   src={currentProject.thumbnail}
                   alt={currentProject.name}
+                  loading="lazy"
                   className="w-full h-full object-center transform group-hover:scale-105 transition-transform smooth-transition duration-700"
                 />
                 <div className="project-image-overlay absolute inset-0"></div>

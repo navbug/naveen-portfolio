@@ -415,7 +415,7 @@ html {
 }
 
 .navbar-glass {
-  background-color: rgb(var(--color-background-rgb) / 0.8);
+  background-color: rgb(var(--color-background-rgb) / 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgb(var(--color-border-rgb) / 0.5);
