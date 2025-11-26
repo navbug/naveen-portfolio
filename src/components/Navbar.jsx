@@ -46,13 +46,25 @@ const Navbar = ({ onContactClick }) => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16 relative">
           {/* Logo */}
           <div className="flex items-center space-x-3 group">
             <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-accent-700 rounded-lg flex items-center justify-center cursor-pointer text-white font-bold text-xl shadow-lg hover:bg-surface transition-all icon-rotate">
               NB
             </div>
             <span className="text-xl font-bold gradient-text"> Portfolio</span>
+          </div>
+
+          {/* Center Button - Desktop */}
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
+            <a
+              href="https://naveenportfolio3d.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary btn-ripple cursor-pointer flex items-center space-x-2"
+            >
+              <span className="text-sm font-medium">Portfolio in 3D</span>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -141,6 +153,15 @@ const Navbar = ({ onContactClick }) => {
           style={{ animation: "slideRight 0.3s ease-out" }}
         >
           <div className="px-4 pt-2 pb-4 space-y-3 bg-surface border-t-2 border-border shadow-lg">
+            <a
+              href="https://naveenportfolio3d.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMobileMenu}
+              className="flex items-center justify-center p-3 bg-gradient-to-r from-primary-600 to-accent-700 text-white rounded-lg transition-all font-medium hover:shadow-lg"
+            >
+              <span>Portfolio in 3D</span>
+            </a>
             <a
               href="https://github.com/navbug"
               target="_blank"
